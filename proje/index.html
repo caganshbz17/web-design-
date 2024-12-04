@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Css linkini bağlama -->
+    <link rel="stylesheet" href="index.css">
+    <!-- JavaScript Bağlama  -->
+    <link rel="stylesheet" href="index.js">
+    <!-- Font Awesome adlı siteden linki alıyoruz -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+
+
+
+
+    <title>Kitap Yıldızları</title>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <!-- Sol Kısım: Logo -->
+        <div class="navbar-left">
+            <a href="index.html" class="logo">Kitap Yıldızları</a>
+        </div>
+
+        <!-- Orta Kısım: Linkler -->
+        <nav class="nav-links">
+            <a href="#home">Ana Sayfa</a>
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Kategoriler</a>
+                <div class="dropdown-menu">
+                    <a href="#roman">Roman</a>
+                    <a href="#bilim">Bilim</a>
+                    <a href="#cocuk">Çocuk</a>
+                </div>
+            </div>
+            <a href="#yeni-cikanlar">Yeni Çıkanlar</a>
+            <a href="#cok-satanlar">Çok Satanlar</a>
+            <a href="#favoriler">Favoriler</a>
+        </nav>
+
+        <!-- Sağ Kısım: Arama ve Kullanıcı -->
+        <div class="icons">
+            <input type="text" placeholder="Kitap Ara..." class="search-box">
+            <a href="#" class="icon user-icon">👤</a>
+            <a href="#" class="icon cart-icon">🛒 <span class="cart-count">0</span></a>
+        </div>
+    </header>
+
+    <!-- Kitap İçeriği -->
+    <section class="book-section">
+        <div class="container">
+            <h1 class="section-title">Popüler Kitaplar</h1>
+            <div class="book-list">
+                <!-- Kitap 1 -->
+                <div class="book-card">
+                    <img src="https://cdn.bkmkitap.com/bir-omur-nasil-yasanir-9499319-36-B.jpg?_gl=1*5ire24*_gcl_aw*R0NMLjE3MzMzMjY5MzUuQ2p3S0NBaUFtTUM2QmhBNkVpd0FkTjVpTGVyYk1GODU0aTFEVHl2RGV6QWxOMU9lV1R5ay1ua3RDcDhSRDVpczJxODJqcVBLeng4NVhCb0NQeHNRQXZEX0J3RQ..*_gcl_au*MzE2NjgwODM4LjE3MzMzMjY5Mzc."
+                        alt="Kitap 1">
+                    <h3>Bir Ömür Nasıl Yaşanır</h3>
+                    <p>Yazar: İlber Ortaylı</p>
+                    <p>Fiyat: 70 TL</p>
+                    <button class="add-to-cart">Sepete Ekle</button>
+                </div>
+
+                <!-- Kitap 2 -->
+                <div class="book-card">
+                    <img src="https://cdn.bkmkitap.com/1984-13632993-64-B.jpg?_gl=1*1kp2s28*_gcl_aw*R0NMLjE3MzMzMjY5MzUuQ2p3S0NBaUFtTUM2QmhBNkVpd0FkTjVpTGVyYk1GODU0aTFEVHl2RGV6QWxOMU9lV1R5ay1ua3RDcDhSRDVpczJxODJqcVBLeng4NVhCb0NQeHNRQXZEX0J3RQ..*_gcl_au*MzE2NjgwODM4LjE3MzMzMjY5Mzc."
+                        alt="Kitap 2">
+                    <h3>1984</h3>
+                    <p>Yazar: George Orwell</p>
+                    <p>Fiyat: 50 TL</p>
+                    <button class="add-to-cart">Sepete Ekle</button>
+                </div>
+
+                <!-- Kitap 3 -->
+                <div class="book-card">
+                    <img src="https://cdn.bkmkitap.com/hayvan-ciftligi-13652322-79-B.jpg?_gl=1*qqxlcr*_gcl_aw*R0NMLjE3MzMzMjY5MzUuQ2p3S0NBaUFtTUM2QmhBNkVpd0FkTjVpTGVyYk1GODU0aTFEVHl2RGV6QWxOMU9lV1R5ay1ua3RDcDhSRDVpczJxODJqcVBLeng4NVhCb0NQeHNRQXZEX0J3RQ..*_gcl_au*MzE2NjgwODM4LjE3MzMzMjY5Mzc."
+                        alt="Kitap 3">
+                    <h3>Hayvan Çiftliği</h3>
+                    <p>Yazar: George Orwell</p>
+                    <p>Fiyat: 40 TL</p>
+                    <button class="add-to-cart">Sepete Ekle</button>
+                </div>
+
+                <!-- Kitap 4 -->
+                <div class="book-card">
+                    <img src="https://cdn.bkmkitap.com/nutuk-dogan-kitap-13446880-92-B.jpg?_gl=1*qqxlcr*_gcl_aw*R0NMLjE3MzMzMjY5MzUuQ2p3S0NBaUFtTUM2QmhBNkVpd0FkTjVpTGVyYk1GODU0aTFEVHl2RGV6QWxOMU9lV1R5ay1ua3RDcDhSRDVpczJxODJqcVBLeng4NVhCb0NQeHNRQXZEX0J3RQ..*_gcl_au*MzE2NjgwODM4LjE3MzMzMjY5Mzc."
+                        alt="Kitap 4">
+                    <h3>Nutuk</h3>
+                    <p>Yazar: Mustafa Kemal Atatürk</p>
+                    <p>Fiyat: 30 TL</p>
+                    <button class="add-to-cart">Sepete Ekle</button>
+                </div>
+
+                <!-- Kitap 5 -->
+                <div class="book-card">
+                    <img src="https://cdn.bkmkitap.com/kurk-mantolu-madonna-11533164-38-B.jpg?_gl=1*1oz9n6m*_gcl_aw*R0NMLjE3MzMzMjY5MzUuQ2p3S0NBaUFtTUM2QmhBNkVpd0FkTjVpTGVyYk1GODU0aTFEVHl2RGV6QWxOMU9lV1R5ay1ua3RDcDhSRDVpczJxODJqcVBLeng4NVhCb0NQeHNRQXZEX0J3RQ..*_gcl_au*MzE2NjgwODM4LjE3MzMzMjY5Mzc."
+                        alt="Kitap 5">
+                    <h3>Kürk Mantolu Madonna</h3>
+                    <p>Yazar: Sabahattin Ali</p>
+                    <p>Fiyat: 35 TL</p>
+                    <button class="add-to-cart">Sepete Ekle</button>
+                </div>
+
+                <!-- Kitap 6 -->
+                <div class="book-card">
+                    <img src="https://cdn.bkmkitap.com/simyaci-13652228-79-B.jpg?_gl=1*gv3w1c*_gcl_aw*R0NMLjE3MzMzMjY5MzUuQ2p3S0NBaUFtTUM2QmhBNkVpd0FkTjVpTGVyYk1GODU0aTFEVHl2RGV6QWxOMU9lV1R5ay1ua3RDcDhSRDVpczJxODJqcVBLeng4NVhCb0NQeHNRQXZEX0J3RQ..*_gcl_au*MzE2NjgwODM4LjE3MzMzMjY5Mzc."
+                        alt="Kitap 6">
+                    <h3>Simyacı</h3>
+                    <p>Yazar: Paulo Coelho</p>
+                    <p>Fiyat: 45 TL</p>
+                    <button class="add-to-cart">Sepete Ekle</button>
+                </div>
+
+                <!-- Kitap 7 -->
+                <div class="book-card">
+                    <img src="https://cdn.bkmkitap.com/olasiliksiz-13430615-56-B.jpg?_gl=1*gv3w1c*_gcl_aw*R0NMLjE3MzMzMjY5MzUuQ2p3S0NBaUFtTUM2QmhBNkVpd0FkTjVpTGVyYk1GODU0aTFEVHl2RGV6QWxOMU9lV1R5ay1ua3RDcDhSRDVpczJxODJqcVBLeng4NVhCb0NQeHNRQXZEX0J3RQ..*_gcl_au*MzE2NjgwODM4LjE3MzMzMjY5Mzc."
+                        alt="Kitap 7">
+                    <h3>Olasılıksız</h3>
+                    <p>Yazar: Adam Fawer</p>
+                    <p>Fiyat: 50 TL</p>
+                    <button class="add-to-cart">Sepete Ekle</button>
+                </div>
+
+                <!-- Kitap 8 -->
+                <div class="book-card">
+                    <img src="https://cdn.bkmkitap.com/fahrenheit-289854-11648565-28-B.jpg?_gl=1*1r433po*_gcl_aw*R0NMLjE3MzMzMjY5MzUuQ2p3S0NBaUFtTUM2QmhBNkVpd0FkTjVpTGVyYk1GODU0aTFEVHl2RGV6QWxOMU9lV1R5ay1ua3RDcDhSRDVpczJxODJqcVBLeng4NVhCb0NQeHNRQXZEX0J3RQ..*_gcl_au*MzE2NjgwODM4LjE3MzMzMjY5Mzc."
+                        alt="Kitap 8">
+                    <h3>Fahrenheit 451</h3>
+                    <p>Yazar: Ray Bradbury</p>
+                    <p>Fiyat: 40 TL</p>
+                    <button class="add-to-cart">Sepete Ekle</button>
+                </div>
+
+                <!-- Kitap 9 -->
+                <div class="book-card">
+                    <img src="https://cdn.bkmkitap.com/ucurtma-avcisi-13374699-22-B.jpg?_gl=1*1r433po*_gcl_aw*R0NMLjE3MzMzMjY5MzUuQ2p3S0NBaUFtTUM2QmhBNkVpd0FkTjVpTGVyYk1GODU0aTFEVHl2RGV6QWxOMU9lV1R5ay1ua3RDcDhSRDVpczJxODJqcVBLeng4NVhCb0NQeHNRQXZEX0J3RQ..*_gcl_au*MzE2NjgwODM4LjE3MzMzMjY5Mzc."
+                        alt="Kitap 9">
+                    <h3>Uçurtma Avcısı</h3>
+                    <p>Yazar: Khaled Hosseini</p>
+                    <p>Fiyat: 55 TL</p>
+                    <button class="add-to-cart">Sepete Ekle</button>
+                </div>
+
+                <!-- Kitap 10 -->
+                <div class="book-card">
+                    <img src="https://cdn.bkmkitap.com/empati-160644-11539283-16-B.jpg?_gl=1*1r433po*_gcl_aw*R0NMLjE3MzMzMjY5MzUuQ2p3S0NBaUFtTUM2QmhBNkVpd0FkTjVpTGVyYk1GODU0aTFEVHl2RGV6QWxOMU9lV1R5ay1ua3RDcDhSRDVpczJxODJqcVBLeng4NVhCb0NQeHNRQXZEX0J3RQ..*_gcl_au*MzE2NjgwODM4LjE3MzMzMjY5Mzc."
+                        alt="Kitap 10">
+                    <h3>Empati</h3>
+                    <p>Yazar: Adam Fawer</p>
+                    <p>Fiyat: 50 TL</p>
+                    <button class="add-to-cart">Sepete Ekle</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Yeni Gelenler -->
+
+    <section class="new-arrivals">
+        <div class="container">
+            <h1 class="section-title">Yeni Gelen Kitaplar</h1>
+            <div class="book-list">
+                <!-- Yeni Gelen Kitap 1 -->
+                <div class="book-card">
+                    <img src="https://cdn.bkmkitap.com/denemeler-30755-12311936-30-B.png?_gl=1*ftrftm*_gcl_aw*R0NMLjE3MzMzMjY5MzUuQ2p3S0NBaUFtTUM2QmhBNkVpd0FkTjVpTGVyYk1GODU0aTFEVHl2RGV6QWxOMU9lV1R5ay1ua3RDcDhSRDVpczJxODJqcVBLeng4NVhCb0NQeHNRQXZEX0J3RQ..*_gcl_au*MzE2NjgwODM4LjE3MzMzMjY5Mzc."
+                        alt="Denemeler">
+                    <h3>Denemeler</h3>
+                    <p>Yazar: Michel de Montaigne</p>
+                    <p>Fiyat: 65 TL</p>
+                    <button class="add-to-cart">Sepete Ekle</button>
+                </div>
+
+                <!-- Yeni Gelen Kitap 2 -->
+                <div class="book-card">
+                    <img src="https://cdn.bkmkitap.com/yuzyillik-yalnizlik-13635149-79-B.jpg?_gl=1*10977z3*_gcl_aw*R0NMLjE3MzMzMjY5MzUuQ2p3S0NBaUFtTUM2QmhBNkVpd0FkTjVpTGVyYk1GODU0aTFEVHl2RGV6QWxOMU9lV1R5ay1ua3RDcDhSRDVpczJxODJqcVBLeng4NVhCb0NQeHNRQXZEX0J3RQ..*_gcl_au*MzE2NjgwODM4LjE3MzMzMjY5Mzc."
+                        alt="Yüzyıllık Yalnızlık">
+                    <h3>Yüzyıllık Yalnızlık</h3>
+                    <p>Yazar: Gabriel García Márquez</p>
+                    <p>Fiyat: 70 TL</p>
+                    <button class="add-to-cart">Sepete Ekle</button>
+                </div>
+
+                <!-- Yeni Gelen Kitap 3 -->
+                <div class="book-card">
+                    <img src="https://cdn.bkmkitap.com/bir-idam-mahkumunun-son-gunu-ciltli-138125-13384626-13-B.jpg?_gl=1*ptz68z*_gcl_aw*R0NMLjE3MzMzMjY5MzUuQ2p3S0NBaUFtTUM2QmhBNkVpd0FkTjVpTGVyYk1GODU0aTFEVHl2RGV6QWxOMU9lV1R5ay1ua3RDcDhSRDVpczJxODJqcVBLeng4NVhCb0NQeHNRQXZEX0J3RQ..*_gcl_au*MzE2NjgwODM4LjE3MzMzMjY5Mzc."
+                        alt="Bir İdam Mahkumunun Son Günü">
+                    <h3>Bir İdam Mahkumunun Son Günü</h3>
+                    <p>Yazar: Victor Hugo</p>
+                    <p>Fiyat: 40 TL</p>
+                    <button class="add-to-cart">Sepete Ekle</button>
+                </div>
+
+                <!-- Yeni Gelen Kitap 4 -->
+                <div class="book-card">
+                    <img
+                        src="https://cdn.bkmkitap.com/tutunamayanlar-13431201-26-B.jpg?_gl=1*ptz68z*_gcl_aw*R0NMLjE3MzMzMjY5MzUuQ2p3S0NBaUFtTUM2QmhBNkVpd0FkTjVpTGVyYk1GODU0aTFEVHl2RGV6QWxOMU9lV1R5ay1ua3RDcDhSRDVpczJxODJqcVBLeng4NVhCb0NQeHNRQXZEX0J3RQ..*_gcl_au*MzE2NjgwODM4LjE3MzMzMjY5Mzc.">
+                    <h3>Tutunamayanlar</h3>
+                    <p>Yazar: Oğuz Atay</p>
+                    <p>Fiyat: 85 TL</p>
+                    <button class="add-to-cart">Sepete Ekle</button>
+                </div>
+
+                <!-- Yeni Gelen Kitap 5 -->
+                <div class="book-card">
+                    <img src="https://cdn.bkmkitap.com/don-kisot-yapi-kredi-yayinlari-5874-12767100-38-B.jpg?_gl=1*s7j9m9*_gcl_aw*R0NMLjE3MzMzMjY5MzUuQ2p3S0NBaUFtTUM2QmhBNkVpd0FkTjVpTGVyYk1GODU0aTFEVHl2RGV6QWxOMU9lV1R5ay1ua3RDcDhSRDVpczJxODJqcVBLeng4NVhCb0NQeHNRQXZEX0J3RQ..*_gcl_au*MzE2NjgwODM4LjE3MzMzMjY5Mzc."
+                        alt="Don Kişot">
+                    <h3>Don Kişot</h3>
+                    <p>Yazar: Miguel de Cervantes</p>
+                    <p>Fiyat: 100 TL</p>
+                    <button class="add-to-cart">Sepete Ekle</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="favorite-war-books">
+        <div class="container">
+            <h1 class="section-title">En Çok Beğenilen Savaş Kitapları</h1>
+            <div class="book-list">
+                <!-- Savaş Kitabı 1 -->
+                <div class="book-card">
+                    <img src="https://cdn.bkmkitap.com/savas-ve-baris-848831-13470298-84-B.jpg?_gl=1*1fa6bxp*_gcl_aw*R0NMLjE3MzMzMjY5MzUuQ2p3S0NBaUFtTUM2QmhBNkVpd0FkTjVpTGVyYk1GODU0aTFEVHl2RGV6QWxOMU9lV1R5ay1ua3RDcDhSRDVpczJxODJqcVBLeng4NVhCb0NQeHNRQXZEX0J3RQ..*_gcl_au*MzE2NjgwODM4LjE3MzMzMjY5Mzc."
+                        alt="Savaş ve Barış">
+                    <h3>Savaş ve Barış</h3>
+                    <p>Yazar: Lev Tolstoy</p>
+                    <p>Fiyat: 90 TL</p>
+                    <button class="add-to-cart">Sepete Ekle</button>
+                </div>
+
+                <!-- Savaş Kitabı 2 -->
+                <div class="book-card">
+                    <img src="https://cdn.bkmkitap.com/dirilis-canakkale-1915-11547736-76-B.jpg?_gl=1*yhfl4*_gcl_aw*R0NMLjE3MzMzMjY5MzUuQ2p3S0NBaUFtTUM2QmhBNkVpd0FkTjVpTGVyYk1GODU0aTFEVHl2RGV6QWxOMU9lV1R5ay1ua3RDcDhSRDVpczJxODJqcVBLeng4NVhCb0NQeHNRQXZEX0J3RQ..*_gcl_au*MzE2NjgwODM4LjE3MzMzMjY5Mzc."
+                        alt="Çanakkale 1915">
+                    <h3>Çanakkale 1915</h3>
+                    <p>Yazar: Turgut Özakman</p>
+                    <p>Fiyat: 70 TL</p>
+                    <button class="add-to-cart">Sepete Ekle</button>
+                </div>
+
+                <!-- Savaş Kitabı 3 -->
+                <div class="book-card">
+                    <img src="https://cdn.bkmkitap.com/savas-sanati-219128-11651186-21-B.jpg?_gl=1*gkxbui*_gcl_aw*R0NMLjE3MzMzMjY5MzUuQ2p3S0NBaUFtTUM2QmhBNkVpd0FkTjVpTGVyYk1GODU0aTFEVHl2RGV6QWxOMU9lV1R5ay1ua3RDcDhSRDVpczJxODJqcVBLeng4NVhCb0NQeHNRQXZEX0J3RQ..*_gcl_au*MzE2NjgwODM4LjE3MzMzMjY5Mzc."
+                        alt="Kayıp Şafak">
+                    <h3>Savaş Sanatı</h3>
+                    <p>Yazar: Sun Tzu</p>
+                    <p>Fiyat: 50 TL</p>
+                    <button class="add-to-cart">Sepete Ekle</button>
+                </div>
+
+                <!-- Savaş Kitabı 4 -->
+                <div class="book-card">
+                    <img src="https://cdn.bkmkitap.com/harp-ve-sulh-mustafa-kemalin-onderliginde-11638592-22-B.jpg?_gl=1*1rdvosm*_gcl_aw*R0NMLjE3MzMzMjY5MzUuQ2p3S0NBaUFtTUM2QmhBNkVpd0FkTjVpTGVyYk1GODU0aTFEVHl2RGV6QWxOMU9lV1R5ay1ua3RDcDhSRDVpczJxODJqcVBLeng4NVhCb0NQeHNRQXZEX0J3RQ..*_gcl_au*MzE2NjgwODM4LjE3MzMzMjY5Mzc."
+                        alt="Harp ve Barış">
+                    <h3>Harp ve Sulh</h3>
+                    <p>Yazar: Eriş Ülger</p>
+                    <p>Fiyat: 80 TL</p>
+                    <button class="add-to-cart">Sepete Ekle</button>
+                </div>
+
+                <!-- Savaş Kitabı 5 -->
+                <div class="book-card">
+                    <img src="https://cdn.bkmkitap.com/ikinci-dunya-savasi-tarihi-810089-13327259-81-B.jpg?_gl=1*1wb2g6a*_gcl_aw*R0NMLjE3MzMzMjY5MzUuQ2p3S0NBaUFtTUM2QmhBNkVpd0FkTjVpTGVyYk1GODU0aTFEVHl2RGV6QWxOMU9lV1R5ay1ua3RDcDhSRDVpczJxODJqcVBLeng4NVhCb0NQeHNRQXZEX0J3RQ..*_gcl_au*MzE2NjgwODM4LjE3MzMzMjY5Mzc."
+                        alt="İkinci Dünya Savaşı">
+                    <h3>İkinci Dünya Savaşı</h3>
+                    <p>Yazar: Owen Booth</p>
+                    <p>Fiyat: 120 TL</p>
+                    <button class="add-to-cart">Sepete Ekle</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <!-- Hakkımızda Bölümü -->
+            <div class="footer-column">
+                <h3>Hakkımızda</h3>
+                <p>Kitap Dünyası, en sevilen kitapları en uygun fiyatlarla sunan bir platformdur. Hayalinizdeki kitabı
+                    keşfetmek için doğru yerdesiniz.</p>
+            </div>
+
+            <!-- Hızlı Bağlantılar -->
+            <div class="footer-column">
+                <h3>Hızlı Bağlantılar</h3>
+                <ul>
+                    <li><a href="#home">Ana Sayfa</a></li>
+                    <li><a href="#yeni-cikanlar">Yeni Çıkanlar</a></li>
+                    <li><a href="#cok-satanlar">Çok Satanlar</a></li>
+                    <li><a href="#favoriler">Favoriler</a></li>
+                </ul>
+            </div>
+
+            <!-- İletişim -->
+            <div class="footer-column">
+                <h3>İletişim</h3>
+                <p><strong>Adres:</strong> Ankara, Türkiye</p>
+                <p><strong>Email:</strong> destek@kitapyıldızları.com</p>
+                <p><strong>Telefon:</strong> +90 555 333 35 87</p>
+            </div>
+
+            <!-- Sosyal Medya -->
+            <div class="footer-column">
+                <h3>Bizi Takip Edin</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Kitap Dünyası. Tüm Hakları Saklıdır.</p>
+        </div>
+    </footer>
+
+
+
+
+
+</body>
+
+</html>

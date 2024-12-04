@@ -1,0 +1,484 @@
+/* Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff9800;
+}
+
+.nav-links .dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    color: #333;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    min-width: 150px;
+}
+
+.dropdown-menu a {
+    color: #333;
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background: #ff9800;
+    color: white;
+}
+
+/* Dropdown hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Sağdaki Arama ve İkonlar */
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.search-box {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.search-box:focus {
+    outline: 2px solid #ff9800;
+}
+
+.icon {
+    margin: 0 10px;
+    font-size: 18px;
+    position: relative;
+    cursor: pointer;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background: #ff9800;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+/* kitaplar */
+
+.book-section {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Kitap Kartları */
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.book-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 220px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.book-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Kitap Görselleri */
+.book-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.book-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Kitap Başlık ve Yazar */
+.book-card h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    text-transform: capitalize;
+}
+
+.book-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Fiyat */
+.book-card p:last-child {
+    font-weight: bold;
+    color: #ff9800;
+    margin-bottom: 20px;
+}
+
+/* Sepete Ekle Butonu */
+.add-to-cart {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #e68900;
+    transform: scale(1.1);
+}
+
+/* Animasyon ve Ek Efektler */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px #ff9800;
+    }
+
+    50% {
+        box-shadow: 0 0 20px #e68900;
+    }
+
+    100% {
+        box-shadow: 0 0 10px #ff9800;
+    }
+}
+
+.book-card:hover .add-to-cart {
+    animation: glow 0.5s infinite alternate;
+}
+
+/* Yeni Gelen Kitaplar Bölümü */
+.new-arrivals {
+    padding: 50px 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.new-arrivals .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.new-arrivals .book-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.new-arrivals .book-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 220px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.new-arrivals .book-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.new-arrivals .book-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.new-arrivals .book-card:hover img {
+    transform: scale(1.05);
+}
+
+.new-arrivals .book-card h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    text-transform: capitalize;
+}
+
+.new-arrivals .book-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.new-arrivals .book-card p:last-child {
+    font-weight: bold;
+    color: #ff9800;
+    margin-bottom: 20px;
+}
+
+.new-arrivals .add-to-cart {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.new-arrivals .add-to-cart:hover {
+    background-color: #e68900;
+    transform: scale(1.1);
+}
+
+/* Savaş Kitapları Bölümü */
+.favorite-war-books {
+    padding: 50px 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.favorite-war-books .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.favorite-war-books .book-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.favorite-war-books .book-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 220px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.favorite-war-books .book-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.favorite-war-books .book-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.favorite-war-books .book-card:hover img {
+    transform: scale(1.05);
+}
+
+.favorite-war-books .book-card h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    text-transform: capitalize;
+}
+
+.favorite-war-books .book-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.favorite-war-books .book-card p:last-child {
+    font-weight: bold;
+    color: #ff9800;
+    margin-bottom: 20px;
+}
+
+.favorite-war-books .add-to-cart {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.favorite-war-books .add-to-cart:hover {
+    background-color: #e68900;
+    transform: scale(1.1);
+}
+
+
+/* Footer Genel */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-column {
+    flex: 1 1 calc(25% - 20px);
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #ff9800;
+}
+
+.footer-column p,
+.footer-column a {
+    font-size: 1rem;
+    color: white;
+    line-height: 1.5;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #ff9800;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+/* Sosyal Medya İkonları */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ff9800;
+}
+
+/* Footer Alt */
+.footer-bottom {
+    background-color: #222;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #bbb;
+}
